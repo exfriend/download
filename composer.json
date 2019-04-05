@@ -1,0 +1,25 @@
+{
+  "name": "exfriend/download",
+  "description": "Bulletproof downloads for PHP",
+  "keywords": [
+    "laravel",
+    "curl",
+    "sockets",
+    "stream",
+    "download"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "exfriend",
+      "email": "i@zlad.tk"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "src/download.php"
+    ]
+  },
+  "require": {
+  }
+}

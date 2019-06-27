@@ -45,7 +45,7 @@ function download( $url, $timeout = 4 )
 
         $fp = fsockopen(
             ( $parsed[ 'scheme' ] == 'http' ? 'http' : 'ssl' )
-            . $parsed[ 'host' ] . "://", ( $parsed[ 'scheme' ] == 'http' ? 80 : 443 ), $errno, $errstr, 30 );
+            . "://" . $parsed[ 'host' ] , ( $parsed[ 'scheme' ] == 'http' ? 80 : 443 ), $errno, $errstr, 30 );
 
         $out = "GET " . str_replace( $parsed[ 'scheme' ] . '://' . $parsed[ 'host' ], '', $url ) . " HTTP/1.1\r\n";
         $out .= "Host: $parsed[host]\r\n";

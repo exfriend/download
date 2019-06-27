@@ -59,7 +59,7 @@ function download( $url, $timeout = 4 )
         fclose( $fp );
 
         $info = substr( $info, strpos( $info, "\r\n\r\n" ) + 4 );
-	}catch(\Exception $e) { return false }
+	}catch(\Exception $e) { return false; }
     }
 
     return trim( $info );

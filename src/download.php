@@ -43,6 +43,7 @@ function download( $url, $timeout = 4 )
     {
         $info = '';
 
+	try{
         $fp = fsockopen(
             ( $parsed[ 'scheme' ] == 'http' ? 'http' : 'ssl' )
             . "://" . $parsed[ 'host' ] , ( $parsed[ 'scheme' ] == 'http' ? 80 : 443 ), $errno, $errstr, 30 );
@@ -58,6 +59,7 @@ function download( $url, $timeout = 4 )
         fclose( $fp );
 
         $info = substr( $info, strpos( $info, "\r\n\r\n" ) + 4 );
+	}catch(\Exception $e) { return false }
     }
 
     return trim( $info );

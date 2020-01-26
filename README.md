@@ -9,7 +9,7 @@ Supports HTTPS. Enjoy!
 ## Installation
 
 ```bash
-composer require exfriend/download
+composer require exfriend/download @dev
 ```
 
 ## Usage
@@ -19,7 +19,5 @@ $html = download( 'https://example.com' );
 ```
 
 ## Credits
-
-Vladislav Otchenashev (vlad@serpentine.io)
 
 [Serpentine.io](https://serpentine.io)
